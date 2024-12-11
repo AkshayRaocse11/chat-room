@@ -1,0 +1,117 @@
+.ChatItem {
+    padding: 10px;
+    background-color: #fff;
+    color: black;
+    width: 100%;
+    height: 72px;
+    display: grid;
+    align-items: center;
+}
+
+.ChatItemContainer {
+    display: grid;
+    grid-template-columns: auto 2fr;
+    column-gap: 12px;
+}
+
+.Avatar {
+    border-radius: 50%;
+    background-color: #78E378;
+    height: 48px;
+    width: 48px;
+    grid-column: 1 / 2;
+}
+
+.MessageBody {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+}
+
+.Name {
+    font-size: 16px;
+    margin-bottom: 4px;
+}
+
+.Message {
+    color: #707991;
+    font-size: 14px;
+}
+
+.Time {
+    text-align: center;
+    margin-bottom: 4px;
+}
+
+.Status {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #78E378;
+    margin: 0 auto;
+    position: relative; /* Added to allow positioning of the count inside */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.StatusCount {
+    font-size: 10px; /* Adjust the font size to fit the circle */
+    color: white; /* Set color to ensure visibility on the circle */
+    position: absolute; /* Position count inside the circle */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust for exact centering */
+}
+
+.Avatar.success {
+    background-color: #28a745; /* Green for success */
+}
+
+.Avatar.warning {
+    background-color: #ffc107; /* Yellow for warning */
+}
+
+.Avatar.danger {
+    background-color: #dc3545; /* Red for danger */
+}
+
+.Avatar.info {
+    background-color: #17a2b8; /* Blue for info */
+}
+
+.Avatar.primary {
+    background-color: #007bff; /* Blue for primary */
+}
+
+.Avatar.secondary {
+    background-color: #6c757d; /* Grey for secondary */
+}
+
+.Log{
+    margin-left: auto;
+}
+
+@media screen and (min-width: 375px ) and (max-width: 768px) {
+    .Avatar {
+        height: 32px;
+        width: 32px;
+    }
+    .Name {
+        font-size: 12px;
+    }    
+    .Message {
+        color: #707991;
+        font-size: 10px;
+    }    
+    .Time {
+        font-size: 10px;
+    }
+    .Status {
+        width: 10px;
+        height: 10px;
+    }    
+    .StatusCount {
+        font-size: 8px;
+    }
+}
